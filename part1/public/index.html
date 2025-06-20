@@ -23,7 +23,9 @@
                 this.loadDog();
             },
             methods: {
-                async loadDog()
+                async loadDog(){
+                    const response = await fethc()
+                }
             }
         }).mount("#app");
     </script>
