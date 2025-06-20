@@ -57,4 +57,8 @@ router.get('/api/walkrequests/open', async () => {
 
 });
 
+router.get('/api/walkers/summary', async () => {
+
+});
+
 module.exports = app;
