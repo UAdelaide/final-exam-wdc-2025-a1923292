@@ -10,12 +10,13 @@
 <body>
     <div id="app">
         <button class="refresh-btn" @click="loadDog"> See Another Dog </button>
-    </div>
-    <div>
-        <img :src="dogImage" alt="">
-        <p><strong>Name: </strong> Montgomery</p>
-        <p><strong>Breed:</strong>Unicorn</p>
-        <p><strong>Fun fact:</strong>Chases squirrels</p>
+        <div>
+            <img :src="dogImage" alt="">
+            <p><strong>Name: </strong> Montgomery</p>
+            <p><strong>Breed:</strong>Unicorn</p>
+            <p><strong>Fun fact:</strong>Chases squirrels</p>
+        </div>
+        
     </div>
     <script>
         const { createApp } = Vue;
