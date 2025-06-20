@@ -133,7 +133,7 @@ router.get('/dogs', async (req,res) => {
     const [result] = await db.query(
       `SELECT name, dog_id AS id FROM Dogs
       WHERE owner_id = ?`,
-      [req.session.user.id]
+      [id]
     );
     res.status(200).json({
       message: "SUCCESS",
