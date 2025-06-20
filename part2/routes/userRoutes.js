@@ -72,7 +72,7 @@ router.post('/actuallogin', async (req,res) => {
       // set session cookie
       req.session.user = {
         username: username,
-        role: ''
+        role: rows[0].role
       };
       res.status(200).json({
         message: "SUCCESS",
