@@ -148,7 +148,7 @@ router.get('/dogs', async (req,res) => {
 
 router.get('/dogs2', async (req,res) => {
   try {
-      const [result] = await db.query(`SELECT d.name AS dog_name, d.size AS size, d.dog_id AS owner_username FROM Dogs AS d
+      const [result] = await db.query(`SELECT d.name AS dog_name, d.size AS size, d.dog_id, d.owner_id FROM Dogs AS d
       INNER JOIN Users AS u ON d.owner_id=u.user_id;`);
       return res.status(200).json(result);
   } catch (e) {
