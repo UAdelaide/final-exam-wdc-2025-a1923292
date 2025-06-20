@@ -39,7 +39,9 @@
       const userName = document.getElementById('username')?.value;
       const password = document.getElementById('password')?.value;
       if (userName && password){
-        const 
+        const response = await fetch();
+        const data = await response.json();
+        if (response.ok)
       }
     })
   </script>
