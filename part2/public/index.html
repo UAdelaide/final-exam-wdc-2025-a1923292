@@ -70,7 +70,8 @@
   <script>
     const { createApp } = Vue;
     createApp({
-      const message = ref("Welcome to the Dog Walking service");
+      setup() {
+        const message = ref("Welcome to the Dog Walking service");
       const dogs = ref([]);
       const error = ref('');
 
@@ -85,6 +86,7 @@
       });
 
       return { message, dogs, error };
+      }
 
     }).mount('#app');
   </script>
