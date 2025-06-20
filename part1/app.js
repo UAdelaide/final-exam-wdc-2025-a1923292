@@ -51,7 +51,7 @@ const router = express.Router();
 
 router.get('/api/dogs', async () => {
   try {
-    
+    await db.query(`SELECT `)
   } catch (e) {
 
   }
