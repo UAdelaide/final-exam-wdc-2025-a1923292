@@ -14,10 +14,15 @@
             padding: 40px;
             text-align: center;
         }
+
+        h1 {
+            
+        }
    </style>
 </head>
 <body>
     <div id="app">
+        <h1>Dog of the day</h1>
         <button class="refresh-btn" @click="loadDog"> See Another Dog </button>
         <div>
             <img :src="dogImage" alt="">
