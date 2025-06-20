@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const mysql = require('mysql2');
+const mysql = require('mysql2/promise');
 const fs = require('fs');
 const startingSql = fs.readFileSync('./dogwalks.sql','utf-8');
 
@@ -39,7 +39,7 @@ let db;
     host: 'localhost',
     user: 'root',
     password: '',
-    database: ''
+    database: 'DogWalkService'
   });
 
 })();
