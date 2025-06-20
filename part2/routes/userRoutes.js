@@ -104,7 +104,9 @@ router.get('/logout', async (req,res) => {
     } else {
       req.session.destroy((e) => {
         if (e){
-          res.status(5)
+          res.status(500).json({
+            message: `Logout failed: ${e}`
+          });
         }
       })
     }
