@@ -23,7 +23,9 @@ let db;
     host: 'localhost',
     user: 'root',
     password: ''
-  })
+  });
+
+  await connection.query()
 
   db = await mysql.createPool({
     host: 'localhost',
