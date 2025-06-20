@@ -128,6 +128,7 @@ router.get('/dogs', async (req,res) => {
       message: "user session expired"
     });
   }
+  const []
 })
 
 module.exports = router;
