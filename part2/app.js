@@ -18,7 +18,7 @@ app.use('/api/users', userRoutes);
 app.use(session({
     secret: "very_secret_secret_2025_WDC_Exam:/",
     resave: false,
-    saveUninitialized: 
+    saveUninitialized: false,
     cookie: {
         secure: false,
         maxAge: 1000 * 60 * 60
