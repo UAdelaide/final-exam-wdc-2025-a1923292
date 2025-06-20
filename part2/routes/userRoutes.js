@@ -162,7 +162,7 @@ router.get('/dogs2', async (req,res) => {
       return res.status(200).json(dogImages);
   } catch (e) {
       return res.status(500).json({
-          message: `failed to query /api/dogs: ${e}`
+          message: `failed to query /api/users/dogs2: ${e}`
       });
   }
 })
