@@ -51,7 +51,7 @@ const router = express.Router();
 
 router.get('/api/dogs', async () => {
   try {
-    await db.query(`SELECT d.name AS dog_name, d.size AS size, u.username`)
+    await db.query(`SELECT d.name AS dog_name, d.size AS size, u.username AS owner_username`)
   } catch (e) {
 
   }
