@@ -80,7 +80,7 @@
           if (!response.ok) throw new Error('failed to load table of dogs');
           dogs.value = await response.json();
         } catch (e) {
-          
+          error.value = e.message;
         }
       })
 
