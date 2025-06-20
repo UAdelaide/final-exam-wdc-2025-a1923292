@@ -30,8 +30,8 @@ let db;
 
   try {
     await connection.query(startingSql);
-  } catch {
-    console.error()
+  } catch (e) {
+    console.error("Unable to initialise tables: ", e);
   }
 
   db = await mysql.createPool({
