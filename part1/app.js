@@ -50,7 +50,11 @@ app.use('/users', usersRouter);
 const router = express.Router();
 
 router.get('/api/dogs', async () => {
-  db.query();
+  try {
+    
+  } catch (e) {
+
+  }
 });
 
 router.get('/api/walkrequests/open', async () => {
