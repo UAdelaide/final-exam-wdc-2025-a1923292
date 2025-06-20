@@ -25,7 +25,7 @@ router.get('/api/walkrequests/open', async (req,res) => {
   INNER JOIN Dogs AS d ON wr.dog_id=d.dog_id
   INNER JOIN Users AS u ON d.owner_id=u.user_id
   WHERE wr.status='open'
-  ORDER BY `)
+  ORDER BY wr.requested_time DESC;`);
 });
 
 router.get('/api/walkers/summary', async (req,res) => {
