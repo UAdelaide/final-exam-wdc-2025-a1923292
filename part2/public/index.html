@@ -40,7 +40,12 @@
       const password = document.getElementById('password')?.value;
       if (userName && password){
         try {
-          const response = await fetch('/api/users/actuallogin');
+          const response = await fetch('/api/users/actuallogin', {
+            method: 'POST',
+            headers: {
+              
+            }
+          });
           const data = await response.json();
           if (response.ok && data.result){
             // redirect
