@@ -12,7 +12,8 @@
         <button class="refresh-btn" @click="loadDog"> See Another Dog </button>
     </div>
     <div>
-        <img 
+        <img :src="dogImage" alt="">
+        
     </div>
     <script>
         const { createApp } = Vue;
