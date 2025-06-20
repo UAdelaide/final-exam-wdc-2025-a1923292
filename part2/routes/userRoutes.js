@@ -66,7 +66,7 @@ router.post('/actuallogin', async (req,res) => {
       `, [username, password]);
     if (rows.length === 0){
       res.status(401).json({
-        message: "Invalid credentials, user not found"
+        message: "Invalid credentials, user not found in /api/users/actuallogin"
       });
     } else if (rows.length === 1){
       res.status(200).json({
@@ -80,9 +80,9 @@ router.post('/actuallogin', async (req,res) => {
     }
   } catch (e) {
     res.status(500).json({
-      message: `Server Error in /api/users/actuallogin, `
-    })
+      message: `Server Error in /api/users/actuallogin: ${e}`
+    });
   }
-})
+});
 
 module.exports = router;
