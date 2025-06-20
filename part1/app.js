@@ -35,13 +35,6 @@ let db;
     console.error("Unable to initialise tables: ", e);
   }
 
-  db = await mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'DogWalkService'
-  });
-
 })();
 
 app.use('/', indexRouter);
