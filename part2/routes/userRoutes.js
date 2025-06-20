@@ -65,6 +65,7 @@ router.post('/actuallogin', async (req,res) => {
       AND password_hash = ?
       `, [username, password]);
     if (rows.length === 0){
+      // no user found 
       res.status(401).json({
         message: "Invalid credentials, user not found in /api/users/actuallogin"
       });
@@ -74,11 +75,13 @@ router.post('/actuallogin', async (req,res) => {
         username: username,
         role: rows[0].role
       };
+      // return success with role
       res.status(200).json({
         message: "SUCCESS",
         role: rows[0].role
       });
     } else {
+      // multiple users found
       res.status(401).json({
         message: "Invalid credentials, multiple users found in /api/users/actuallogin"
       });
