@@ -110,6 +110,8 @@
         async function loadDogs(){
           try {
             const response = await fetch('/api/users/dogs');
+            const data = await response.json();
+            if (res.ok &&)
           } catch (e) {
 
           }
