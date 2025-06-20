@@ -112,7 +112,7 @@
             const response = await fetch('/api/users/dogs');
             const data = await response.json();
             if (res.ok && data.message === "SUCCESS"){
-              dogs.value = 
+              dogs.value = data.dogs;
             }
           } catch (e) {
 
