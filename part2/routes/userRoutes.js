@@ -59,13 +59,14 @@ router.post('/actuallogin', async (req,res) => {
   const { username, password } = req.body;
 
   try {
+    // get all users with matching username and password in u
     const [rows] = db.query(`
       SELECT role FROM users
       WHERE username = ?
       AND password_hash = ?
       `, [username, password]);
     if (rows.length === 0){
-      // no user found 
+      // no user found from query
       res.status(401).json({
         message: "Invalid credentials, user not found in /api/users/actuallogin"
       });
@@ -81,7 +82,7 @@ router.post('/actuallogin', async (req,res) => {
         role: rows[0].role
       });
     } else {
-      // multiple users found
+      // multiple users found from query
       res.status(401).json({
         message: "Invalid credentials, multiple users found in /api/users/actuallogin"
       });
