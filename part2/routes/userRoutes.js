@@ -151,7 +151,7 @@ router.get('/dogs2', async (req,res) => {
       const [result] = await db.query(`SELECT * FROM Dogs;`);
       const dogImages = await Promise.all(dogs.map(async (dog) => {
         try {
-          
+          const response = await fetch('https://dog.ceo/api/breeds/image/random')
         } catch (e) {
 
         }
