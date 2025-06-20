@@ -82,7 +82,9 @@
         } catch (e) {
           error.value = e.message;
         }
-      })
+      });
+
+      return { message, dogs, error}
 
     }).mount('#app');
   </script>
