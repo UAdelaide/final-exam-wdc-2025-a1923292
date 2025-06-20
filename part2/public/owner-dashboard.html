@@ -64,7 +64,7 @@
     <p v-else>No walk requests yet.</p>
   </div>
   <script>
-    const logout() => {
+    const logoutFunction = async () => {
       console.log('logout clicked')
       try {
         const response = await fetch('/api/users/logout',{
