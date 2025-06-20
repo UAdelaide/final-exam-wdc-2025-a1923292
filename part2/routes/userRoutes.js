@@ -131,7 +131,9 @@ router.get('/dogs', async (req,res) => {
   try {
 
   } catch (e) {
-    
+    res.status(500).json({
+      message: `Server Error: ${e}`
+    })
   }
   const [result] = await db.query(
     `SELECT d.name FROM Dogs AS d
