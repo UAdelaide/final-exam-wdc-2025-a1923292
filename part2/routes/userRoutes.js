@@ -61,7 +61,8 @@ router.post('/actuallogin', async (req,res) => {
   try {
     const [rows] = db.query(`
       SELECT role FROM users
-      WHERE 
+      WHERE username = ?
+      AND password_hash = ?
       `)
   } catch (e) {
 
