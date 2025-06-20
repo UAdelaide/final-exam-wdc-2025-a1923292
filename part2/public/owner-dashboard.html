@@ -64,8 +64,7 @@
     <p v-else>No walk requests yet.</p>
   </div>
   <script>
-    document.getElementById('log-out-btn').addEventListener('click', async (event) => {
-      event.preventDefault();
+    document.getElementById('log-out-btn').addEventListener('click', async () => {
       try {
         const response = await fetch('/api/users/logout',{
           method: 'POST',
