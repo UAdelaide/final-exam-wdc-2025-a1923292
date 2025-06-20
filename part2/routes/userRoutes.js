@@ -79,7 +79,9 @@ router.post('/actuallogin', async (req,res) => {
       });
     }
   } catch (e) {
-    res.status(500).j
+    res.status(500).json({
+      message: "Server Error in /api/users/actuallogin"
+    })
   }
 })
 
