@@ -112,11 +112,10 @@ router.get('/logout', async (req,res) => {
         res.status(200).json({
           message: "SUCCESS"
         });
-      })
+      });
     }
-
   } catch (e) {
-
+    res.status(55)
   }
 });
 
