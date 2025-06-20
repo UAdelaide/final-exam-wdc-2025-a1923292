@@ -71,7 +71,7 @@ router.post('/actuallogin', async (req,res) => {
     } else if (rows.length === 1){
       res.status(200).json({
         message: "SUCCESS",
-        
+        role: rows[0].role
       })
     }
   } catch (e) {
