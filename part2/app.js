@@ -18,7 +18,10 @@ app.use('/api/users', userRoutes);
 app.use(session({
     secret: "very_secret_secret_2025_WDC_Exam:/",
     resave: false,
-    saveUni
+    saveUninitialised: false,
+    cookie: {
+        
+    }
 }))
 
 // Export the app instead of listening here
