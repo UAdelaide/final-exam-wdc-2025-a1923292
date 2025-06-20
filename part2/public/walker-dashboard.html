@@ -78,9 +78,9 @@
             const response = await fetch('/api/users/me');
             if (!response.ok) throw new Error('not logged in');
             const data = await response.json();
-            userId.value = 
+            userId.value = data.id;
           } catch (e) {
-
+            error.value = ''
           }
         }
 
