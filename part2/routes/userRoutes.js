@@ -74,10 +74,12 @@ router.post('/actuallogin', async (req,res) => {
         role: rows[0].role
       });
     } else {
-      
+      res.status(401).json({
+        message: "Invalid credentials, multiple users found"
+      });
     }
   } catch (e) {
-
+    res.status(500).j
   }
 })
 
