@@ -54,6 +54,7 @@
           if (response.ok && data.message === "SUCCESS"){
             // redirect to whatever role the user is
             window.location.href(`/${data.role}-dashboard.html`);
+            return;
           } else {
             console.error(data.message);
           }
