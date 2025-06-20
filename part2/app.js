@@ -13,8 +13,6 @@ app.use(express.static(path.join(__dirname, '/public')));
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
-app.use('/api/walks', walkRoutes);
-app.use('/api/users', userRoutes);
 app.use(session({
     secret: "very_secret_secret_2025_WDC_Exam:/",
     resave: false,
@@ -25,5 +23,8 @@ app.use(session({
     }
 }));
 
+
+app.use('/api/walks', walkRoutes);
+app.use('/api/users', userRoutes);
 // Export the app instead of listening here
 module.exports = app;
