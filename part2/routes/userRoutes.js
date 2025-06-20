@@ -72,7 +72,9 @@ router.post('/actuallogin', async (req,res) => {
       res.status(200).json({
         message: "SUCCESS",
         role: rows[0].role
-      })
+      });
+    } else {
+      
     }
   } catch (e) {
 
