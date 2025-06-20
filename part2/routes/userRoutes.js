@@ -115,7 +115,9 @@ router.get('/logout', async (req,res) => {
       });
     }
   } catch (e) {
-    res.status(55)
+    res.status(500).json({
+      message: `Server Error: ${e}`
+    });
   }
 });
 
