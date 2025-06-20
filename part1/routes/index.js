@@ -30,10 +30,9 @@ router.get('/api/walkrequests/open', async (req,res) => {
     return res.status(200).json(result);
   } catch (e) {
     return res.status(500).json({
-      message: `request to /api/walkrequests/open failed: `
+      message: `request to /api/walkrequests/open failed: ${e}`
     });
   }
-
 });
 
 router.get('/api/walkers/summary', async (req,res) => {
