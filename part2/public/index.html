@@ -51,8 +51,10 @@
             })
           });
           const data = await response.json();
-          if (response.ok && data.message){
+          if (response.ok && data.message === "SUCCESS"){
             // redirect
+          } else {
+            console.error(data.message);
           }
         } catch (e) {
           console.error("cooked");
