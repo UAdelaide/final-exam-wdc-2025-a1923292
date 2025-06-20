@@ -36,7 +36,13 @@ router.get('/api/walkrequests/open', async (req,res) => {
 });
 
 router.get('/api/walkers/summary', async (req,res) => {
-  
+  try {
+
+  } catch (e) {
+    res.status(500).json({
+      message: ``
+    })
+  }
 });
 
 module.exports = router;
