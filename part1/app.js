@@ -20,7 +20,10 @@ let db;
 (async () => {
 
   db = mysql.createPool({
-    
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: ''
   })
 
 })();
