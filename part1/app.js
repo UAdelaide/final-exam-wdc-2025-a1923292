@@ -19,9 +19,11 @@ let db;
 
 (async () => {
 
-  const connection = m
+  const connection = await mysql.createConnection({
+    host:''
+  })
 
-  db = mysql.createPool({
+  db = await mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
