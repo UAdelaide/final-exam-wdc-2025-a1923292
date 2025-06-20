@@ -53,6 +53,6 @@ router.get('/api/dogs', async () => {
 
 });
 
-
+router.get('/api/');
 
 module.exports = app;
