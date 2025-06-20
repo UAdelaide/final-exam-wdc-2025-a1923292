@@ -28,7 +28,9 @@ let db;
     multipleStatements: true
   });
 
-  await connection.query()
+  try {
+    await connection.query()
+  }
 
   db = await mysql.createPool({
     host: 'localhost',
