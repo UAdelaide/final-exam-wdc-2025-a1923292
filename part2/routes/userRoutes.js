@@ -128,12 +128,12 @@ router.get('/dogs', async (req,res) => {
       message: "user session expired"
     });
   }
-  const id = req.session.user.id;
+  const user_id = req.session.user.id;
   try {
     const [result] = await db.query(
       `SELECT name, dog_id AS id FROM Dogs
-      WHERE owner_id = 1`,
-      [id]
+      WHERE owner_id = ?`,
+      [user_id]
     );
     res.status(200).json({
       message: "SUCCESS",
