@@ -123,7 +123,7 @@ router.post('/logout', async (req,res) => {
 });
 
 router.get('/dogs', async (req,res) => {
-  if (!req.session){
+  if (!req.session?.user){
     res.status(401).json({
       message: "user session expired"
     });
