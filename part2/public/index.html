@@ -43,8 +43,11 @@
           const response = await fetch('/api/users/actuallogin', {
             method: 'POST',
             headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
               
-            }
+            })
           });
           const data = await response.json();
           if (response.ok && data.result){
