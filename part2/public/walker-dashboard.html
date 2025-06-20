@@ -37,6 +37,33 @@
   </div>
 
   <script>
+
+    const logoutFunction = async () => {
+      try {
+        const response = await fetch('/api/users/logout',{
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({})
+        });
+        const data = await response.json();
+        if (response.ok && data.message === "SUCCESS"){
+          window.location.href = '/';
+          alert('Successfully logged out');
+        } else {
+          alert('Error: unable to logout');
+          console.error(data.message);
+        }
+      } catch (e) {
+        console.error(`Issue in logout button: ${e}`);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+       document.getElementById('log-out-btn').addEventListener('click',logoutFunction);
+    });
+
     const { createApp, ref, onMounted } = Vue;
 
     createApp({
