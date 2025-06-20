@@ -16,7 +16,9 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 app.use(session({
-    secret: "very_secret_secret_2025"
+    secret: "very_secret_secret_2025_WDC_Exam:/",
+    resave: false,
+    saveUni
 }))
 
 // Export the app instead of listening here
