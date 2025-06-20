@@ -159,7 +159,7 @@ router.get('/dogs2', async (req,res) => {
           return { ...dog, image_url: null };
         }
       }));
-      return res.status(200).json(result);
+      return res.status(200).json(dogImages);
   } catch (e) {
       return res.status(500).json({
           message: `failed to query /api/dogs: ${e}`
