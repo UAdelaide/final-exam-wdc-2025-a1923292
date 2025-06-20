@@ -65,7 +65,11 @@ router.post('/actuallogin', async (req,res) => {
       AND password_hash = ?
       `, [username, password]);
     if (rows.length === 0){
-      res.status(401).json()
+      res.status(401).json({
+        message: "Invalid credentials, user not found"
+      });
+    } else if (rows.length === 1){
+      
     }
   } catch (e) {
 
