@@ -52,7 +52,7 @@
           });
           const data = await response.json();
           if (response.ok && data.message === "SUCCESS"){
-            // redirect to 
+            // redirect to whatever role the user is
             window.location.href(`/${data.role}-dashboard.html`);
           } else {
             console.error(data.message);
