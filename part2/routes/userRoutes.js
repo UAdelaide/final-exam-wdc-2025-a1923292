@@ -96,7 +96,11 @@ router.post('/actuallogin', async (req,res) => {
 });
 
 router.get('/logout', async (req,res) => {
+  try {
+    
+  } catch (e) {
 
+  }
 });
 
 module.exports = router;
