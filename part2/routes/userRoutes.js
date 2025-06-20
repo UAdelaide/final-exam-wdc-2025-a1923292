@@ -153,9 +153,9 @@ router.get('/dogs2', async (req,res) => {
         try {
           const response = await fetch('https://dog.ceo/api/breeds/image/random');
           const data = await response.json();
-          return { ...dog, image_url: data };
+          return { ...dog, image_url: data.message };
         } catch (e) {
-
+          console.error(`Er`)
         }
       }));
       return res.status(200).json(result);
