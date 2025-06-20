@@ -73,7 +73,7 @@ router.post('/actuallogin', async (req,res) => {
     } else if (rows.length === 1){
       // set session cookie
       req.session.user = {
-        id
+        id: rows[0].id,
         username: username,
         role: rows[0].role
       };
