@@ -165,6 +165,6 @@ router.get('/dogs2', async (req,res) => {
           message: `failed to query /api/users/dogs2: ${e}`
       });
   }
-})
+});
 
 module.exports = router;
