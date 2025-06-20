@@ -99,9 +99,11 @@ router.get('/logout', async (req,res) => {
   try {
     if (!req.session){
       res.status(401).json({
-        message: ""
-      })
+        message: "session cooked is not defined, cannot log out"
+      });
+      return;
     }
+    
   } catch (e) {
 
   }
