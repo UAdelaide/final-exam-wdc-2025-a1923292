@@ -108,6 +108,7 @@ router.get('/logout', async (req,res) => {
             message: `Logout failed: ${e}`
           });
         }
+        res.clearCookie();
       })
     }
 
