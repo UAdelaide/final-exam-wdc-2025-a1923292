@@ -135,6 +135,10 @@ router.get('/dogs', async (req,res) => {
       WHERE u.user_id = ?`,
       [req.session.user.id]
     );
+    res.status(200).json({
+      message: "SUCCESS,
+      dog
+    })
   } catch (e) {
     res.status(500).json({
       message: `Server Error: ${e}`
