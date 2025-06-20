@@ -64,6 +64,7 @@
     <p v-else>No walk requests yet.</p>
   </div>
   <script>
+
     const logoutFunction = async () => {
       console.log('logout clicked')
       try {
@@ -86,8 +87,7 @@
         console.error(`Issue in logout button: ${e}`);
       }
     }
-  </script>
-  <script>
+
     const { createApp, ref, onMounted } = Vue;
 
     createApp({
