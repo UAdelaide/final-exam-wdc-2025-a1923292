@@ -53,6 +53,7 @@
           const data = await response.json();
           if (response.ok && data.message === "SUCCESS"){
             // redirect
+            window.location.href('/');
           } else {
             console.error(data.message);
           }
