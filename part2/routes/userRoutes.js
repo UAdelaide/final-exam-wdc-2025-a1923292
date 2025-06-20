@@ -135,6 +135,7 @@ router.get('/dogs', async (req,res) => {
       WHERE owner_id = ?`,
       [id]
     );
+    console.log(result);
     res.status(200).json({
       message: "SUCCESS",
       dogs: result
