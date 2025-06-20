@@ -60,7 +60,7 @@ router.post('/actuallogin', async (req,res) => {
 
   try {
     // get all users with matching username and password in users table
-    const [rows] = db.query(`
+    const [rows] = await db.query(`
       SELECT role FROM Users
       WHERE username = ?
       AND password_hash = ?
