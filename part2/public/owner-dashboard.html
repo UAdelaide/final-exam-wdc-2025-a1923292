@@ -67,7 +67,9 @@
     document.getElementById('log-out-btn').addEventListener('click', async (event) => {
       event.preventDefault();
       try {
-        const response = await fetch('/api/users/logout',)
+        const response = await fetch('/api/users/logout',{
+          
+        });
       } catch (e) {
         console.error(`Issue in logout button: ${e}`);
       }
