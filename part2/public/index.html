@@ -41,7 +41,7 @@
       if (userName && password){
         try {
           const response = await fetch('/api/users/actuallogin', {
-            method: 'POST',
+            method: 'GET',
             headers: {
               'Content-Type': 'application/json'
             },
