@@ -29,7 +29,9 @@ let db;
   });
 
   try {
-    await connection.query()
+    await connection.query(startingSql);
+  } catch {
+    console.error()
   }
 
   db = await mysql.createPool({
