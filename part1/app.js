@@ -52,7 +52,7 @@ const router = express.Router();
 router.get('/api/dogs', async () => {
   try {
     await db.query(`SELECT d.name AS dog_name, d.size AS size, u.username AS owner_username FROM Dogs AS d
-    INNER JOIN Users AS u ON d.owner_id=u.user_id`)
+    INNER JOIN Users AS u ON d.owner_id=u.user_id;`)
   } catch (e) {
 
   }
