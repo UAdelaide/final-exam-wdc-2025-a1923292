@@ -31,7 +31,7 @@ router.get('/api/walkrequests/open', async (req,res) => {
   } catch (e) {
     return res.status(500).json({
       message: 
-    })
+    });
   }
 
 });
