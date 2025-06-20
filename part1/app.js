@@ -53,6 +53,8 @@ router.get('/api/dogs', async () => {
 
 });
 
-router.get('/api/');
+router.get('/api/walkrequests/open', async () => {
+
+});
 
 module.exports = app;
