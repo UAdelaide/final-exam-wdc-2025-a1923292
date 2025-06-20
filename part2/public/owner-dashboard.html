@@ -65,6 +65,7 @@
   </div>
   <script>
     document.getElementById('log-out-btn').addEventListener('click', async () => {
+      console.log('logout clicked')
       try {
         const response = await fetch('/api/users/logout',{
           method: 'POST',
