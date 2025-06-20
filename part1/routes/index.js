@@ -38,6 +38,7 @@ router.get('/api/walkrequests/open', async (req,res) => {
 router.get('/api/walkers/summary', async (req,res) => {
   try {
     const [result] = await db.query();
+    res.status(200).json(result);
   } catch (e) {
     res.status(500).json({
       message: `request to /api/walkers/summary failed: ${e}`
