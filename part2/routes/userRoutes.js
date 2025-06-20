@@ -65,7 +65,7 @@ router.post('/actuallogin', async (req,res) => {
       AND password_hash = ?
       `, [username, password]);
     if (rows.length === 0){
-      res.status(401).
+      res.status(401).json()
     }
   } catch (e) {
 
