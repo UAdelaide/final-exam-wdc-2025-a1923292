@@ -22,7 +22,8 @@ router.get('/api/dogs', async (req,res) => {
 
 router.get('/api/walkrequests/open', async (req,res) => {
   const [result] = await db.query(`SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr.location, u.username AS owner_username FROM WalkRequests AS wr
-  INNER JOIN Dogs AS d ON wr.dog_id=d.`)
+  INNER JOIN Dogs AS d ON wr.dog_id=d.dog_id
+  INNER JOIN Users AS u ON `)
 });
 
 router.get('/api/walkers/summary', async (req,res) => {
