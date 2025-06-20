@@ -19,7 +19,7 @@ let db;
 
 (async () => {
 
-  db = 
+  db = mysql.createConnection
 
 })();
 
