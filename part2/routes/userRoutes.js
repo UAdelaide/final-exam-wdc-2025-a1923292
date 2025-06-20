@@ -69,6 +69,11 @@ router.post('/actuallogin', async (req,res) => {
         message: "Invalid credentials, user not found in /api/users/actuallogin"
       });
     } else if (rows.length === 1){
+      // set session cookie
+      req.session.user = {
+        username: username,
+        role: ''
+      };
       res.status(200).json({
         message: "SUCCESS",
         role: rows[0].role
