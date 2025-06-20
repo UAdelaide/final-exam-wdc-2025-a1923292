@@ -130,7 +130,8 @@ router.get('/dogs', async (req,res) => {
   }
   const [result] = await db.query(`
     SELECT d.name FROM Dogs AS d
-    INNER JOIN Users AS u ON u.user_id`)
+    INNER JOIN Users AS u ON u.user_id=d.owner_id
+    WHERE `)
 })
 
 module.exports = router;
