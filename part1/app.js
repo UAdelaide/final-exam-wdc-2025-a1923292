@@ -55,7 +55,9 @@ router.get('/api/dogs', async (req,res) => {
     INNER JOIN Users AS u ON d.owner_id=u.user_id;`);
   } catch (e) {
     console.error('failed to query /api/dogs', e);
-    return res.status(500).
+    return res.status(500).json({
+        message: `failed to query`
+    })
   }
 });
 
