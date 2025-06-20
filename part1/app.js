@@ -4,7 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mysql = require('mysql2');
 const fs = require('fs');
-const startingSql = fs.readFileSync('./dogwalks.sql','utf');
+const startingSql = fs.readFileSync('./dogwalks.sql','utf-8');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -24,7 +24,8 @@ let db;
   const connection = await mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: ''
+    password: '',
+    multipleStatements: true
   });
 
   await connection.query()
