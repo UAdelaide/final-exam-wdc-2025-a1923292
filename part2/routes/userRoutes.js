@@ -121,4 +121,6 @@ router.post('/logout', async (req,res) => {
   }
 });
 
+router.get('/')
+
 module.exports = router;
