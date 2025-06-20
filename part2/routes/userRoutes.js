@@ -60,7 +60,8 @@ router.post('/actuallogin', async (req,res) => {
 
   try {
     const [rows] = db.query(`
-      SELECT role FROM users 
+      SELECT role FROM users
+      WHERE 
       `)
   } catch (e) {
 
