@@ -111,7 +111,9 @@
           try {
             const response = await fetch('/api/users/dogs');
             const data = await response.json();
-            if (res.ok &&)
+            if (res.ok && data.message === "SUCCESS"){
+              dogs.value = 
+            }
           } catch (e) {
 
           }
