@@ -40,11 +40,12 @@
       const password = document.getElementById('password')?.value;
       if (userName && password){
         try {
-          
+          const response = await fetch();
+          const data = await response.json();
+          if (response.ok && data.)
+        } catch (e) {
+
         }
-        const response = await fetch();
-        const data = await response.json();
-        if (response.ok && )
       }
     })
   </script>
