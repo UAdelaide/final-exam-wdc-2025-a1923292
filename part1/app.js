@@ -49,6 +49,10 @@ app.use('/users', usersRouter);
 
 const router = express.Router();
 
-router.get('/api')
+router.get('/api/dogs', async () => {
+
+});
+
+
 
 module.exports = app;
