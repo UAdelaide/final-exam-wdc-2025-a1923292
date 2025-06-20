@@ -129,6 +129,7 @@ router.get('/dogs', async (req,res) => {
     });
   }
   const user_id = req.session.user.id;
+  console.log(user_id);
   try {
     const [result] = await db.query(
       `SELECT name, dog_id AS id FROM Dogs
