@@ -4,7 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mysql = require('mysql2');
 const fs = require('fs');
-const startingSql = 
+const startingSql = fs.readFileSync('./dogwalks.sql','utf');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
