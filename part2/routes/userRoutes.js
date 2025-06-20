@@ -75,12 +75,12 @@ router.post('/actuallogin', async (req,res) => {
       });
     } else {
       res.status(401).json({
-        message: "Invalid credentials, multiple users found"
+        message: "Invalid credentials, multiple users found in /api/users/actuallogin"
       });
     }
   } catch (e) {
     res.status(500).json({
-      message: "Server Error in /api/users/actuallogin"
+      message: `"Server Error in /api/users/actuallogin`
     })
   }
 })
