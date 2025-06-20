@@ -113,9 +113,11 @@
             const data = await response.json();
             if (res.ok && data.message === "SUCCESS"){
               dogs.value = data.dogs;
+            } else {
+              console.log(data.message);
             }
           } catch (e) {
-
+            
           }
         }
 
