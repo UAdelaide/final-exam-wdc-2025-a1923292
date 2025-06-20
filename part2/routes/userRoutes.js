@@ -69,7 +69,10 @@ router.post('/actuallogin', async (req,res) => {
         message: "Invalid credentials, user not found"
       });
     } else if (rows.length === 1){
-      
+      res.status(200).json({
+        message: "SUCCESS",
+        
+      })
     }
   } catch (e) {
 
