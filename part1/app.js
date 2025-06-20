@@ -19,7 +19,9 @@ let db;
 
 (async () => {
 
-  db = mysql.createConnection
+  db = mysql.createPool({
+    
+  })
 
 })();
 
