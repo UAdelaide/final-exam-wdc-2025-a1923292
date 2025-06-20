@@ -146,7 +146,7 @@ router.get('/dogs', async (req,res) => {
   }
 });
 
-router.get('/dogs2', async (req,res) => {
+router.get('/dogs-images', async (req,res) => {
   try {
       const [dogs] = await db.query(`SELECT * FROM Dogs;`);
       const dogImages = await Promise.all(dogs.map(async (dog) => {
