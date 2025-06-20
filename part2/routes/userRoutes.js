@@ -129,18 +129,17 @@ router.get('/dogs', async (req,res) => {
     });
   }
   try {
-
+    const [result] = await db.query(
+      `SELECT d.name FROM Dogs AS d
+      INNER JOIN Users AS u ON u.user_id=d.owner_id
+      WHERE u.user_id = ?`,
+      [req.session.user.id]
+    );
   } catch (e) {
     res.status(500).json({
       message: `Server Error: ${e}`
-    })
+    });
   }
-  const [result] = await db.query(
-    `SELECT d.name FROM Dogs AS d
-    INNER JOIN Users AS u ON u.user_id=d.owner_id
-    WHERE u.user_id = ?`,
-    [req.session.user.id]
-  );
 });
 
 module.exports = router;
