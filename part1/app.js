@@ -30,6 +30,7 @@ let db;
 
   try {
     await connection.query(startingSql);
+    await connection.end();
   } catch (e) {
     console.error("Unable to initialise tables: ", e);
   }
