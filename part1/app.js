@@ -46,8 +46,7 @@ let db;
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-const router = express.Router();
-app.use(router);
+
 
 router.get('/api/dogs', async (req,res) => {
   try {
