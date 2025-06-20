@@ -129,7 +129,7 @@ router.get('/dogs', async (req,res) => {
     });
   }
   const [result] = await db.query(`
-    SELECT `)
+    SELECT d.name FROM `)
 })
 
 module.exports = router;
