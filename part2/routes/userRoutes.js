@@ -59,7 +59,7 @@ router.post('/actuallogin', async (req,res) => {
   const { username, password } = req.body;
 
   try {
-    // get all users with matching username and password in u
+    // get all users with matching username and password in users table
     const [rows] = db.query(`
       SELECT role FROM users
       WHERE username = ?
@@ -88,6 +88,7 @@ router.post('/actuallogin', async (req,res) => {
       });
     }
   } catch (e) {
+    // server failed ffs
     res.status(500).json({
       message: `Server Error in /api/users/actuallogin: ${e}`
     });
