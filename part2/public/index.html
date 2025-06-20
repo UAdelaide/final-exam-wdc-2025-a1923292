@@ -72,20 +72,20 @@
     createApp({
       setup() {
         const message = ref("Welcome to the Dog Walking service");
-      const dogs = ref([]);
-      const error = ref('');
+        const dogs = ref([]);
+        const error = ref('');
 
-      onMounted(async () => {
-        try {
-          const response = await fetch('/api/users/dogs2');
-          if (!response.ok) throw new Error('failed to load table of dogs');
-          dogs.value = await response.json();
-        } catch (e) {
-          error.value = e.message;
-        }
-      });
+        onMounted(async () => {
+          try {
+            const response = await fetch('/api/users/dogs2');
+            if (!response.ok) throw new Error('failed to load table of dogs');
+            dogs.value = await response.json();
+          } catch (e) {
+            error.value = e.message;
+          }
+        });
 
-      return { message, dogs, error };
+        return { message, dogs, error };
       }
 
     }).mount('#app');
