@@ -155,7 +155,8 @@ router.get('/dogs2', async (req,res) => {
           const data = await response.json();
           return { ...dog, image_url: data.message };
         } catch (e) {
-          console.error(`Error fetching image for dog with id ${dog.dog_id}`)
+          console.error(`Error fetching image for dog with id ${dog.dog_id}: ${e}`);
+          return { ...dog, image_url: null };
         }
       }));
       return res.status(200).json(result);
