@@ -49,21 +49,21 @@ app.use('/users', usersRouter);
 
 const router = express.Router();
 
-router.get('/api/dogs', async () => {
+router.get('/api/dogs', async (req,res) => {
   try {
     await db.query(`SELECT d.name AS dog_name, d.size AS size, u.username AS owner_username FROM Dogs AS d
     INNER JOIN Users AS u ON d.owner_id=u.user_id;`);
   } catch (e) {
     console.error('failed to query /api/dogs', e);
-    
+    return res.status(500).
   }
 });
 
-router.get('/api/walkrequests/open', async () => {
+router.get('/api/walkrequests/open', async (req,res) => {
 
 });
 
-router.get('/api/walkers/summary', async () => {
+router.get('/api/walkers/summary', async (req,res) => {
 
 });
 
