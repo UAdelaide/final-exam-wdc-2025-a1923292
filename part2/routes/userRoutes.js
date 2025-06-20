@@ -109,7 +109,9 @@ router.get('/logout', async (req,res) => {
           });
         }
         res.clearCookie('connect.sid');
-        res.status(200).
+        res.status(200).json({
+          message: "SUCCESS"
+        });
       })
     }
 
