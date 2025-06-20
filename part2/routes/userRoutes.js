@@ -98,7 +98,9 @@ router.post('/actuallogin', async (req,res) => {
 router.get('/logout', async (req,res) => {
   try {
     if (!req.session){
-      
+      res.status(401).json({
+        message: ""
+      })
     }
   } catch (e) {
 
