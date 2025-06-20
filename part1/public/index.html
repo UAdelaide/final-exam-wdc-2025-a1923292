@@ -19,14 +19,14 @@
             font-size: 2.5rem;
         }
 
-
+        
    </style>
 </head>
 <body>
     <div id="app">
         <h1>Dog of the day</h1>
         <button class="refresh-btn" @click="loadDog"> See Another Dog </button>
-        <div class="dog-card">
+        <div class="dog-card" v-if="dogImage">
             <img :src="dogImage" alt="">
             <p><strong>Name: </strong> Montgomery</p>
             <p><strong>Breed:</strong>Unicorn</p>
