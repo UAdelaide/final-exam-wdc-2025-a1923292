@@ -76,7 +76,9 @@
         const data = await response.json();
         if (response.ok && data.success){
           window.location.href = '/';
-          
+          alert('Successfully logged out');
+        } else {
+          alert('Error: unable to logout');
         }
       } catch (e) {
         console.error(`Issue in logout button: ${e}`);
