@@ -132,6 +132,7 @@ router.get('/dogs', async (req,res) => {
     SELECT d.name FROM Dogs AS d
     INNER JOIN Users AS u ON u.user_id=d.owner_id
     WHERE u.user_id = ?`,
+    [req.session.user.id]
   )
 })
 
