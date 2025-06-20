@@ -149,7 +149,7 @@ router.get('/dogs', async (req,res) => {
 router.get('/dogs2', async (req,res) => {
   try {
       const [result] = await db.query(`SELECT * FROM Dogs;`);
-      
+      const dogImages = await Promise.all();
       return res.status(200).json(result);
   } catch (e) {
       return res.status(500).json({
