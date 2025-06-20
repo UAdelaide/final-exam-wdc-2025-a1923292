@@ -114,6 +114,9 @@
     }).mount('#app');
   </script>
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+    })
     document.querySelector('form').addEventListener('submit', async (event) => {
       event.preventDefault();
       const userName = document.getElementById('username')?.value;
