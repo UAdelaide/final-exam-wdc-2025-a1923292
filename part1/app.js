@@ -47,6 +47,8 @@ let db;
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+const router = express.Router();
 
+router.get('/api')
 
 module.exports = app;
