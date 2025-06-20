@@ -63,7 +63,8 @@ router.post('/actuallogin', async (req,res) => {
       SELECT role FROM users
       WHERE username = ?
       AND password_hash = ?
-      `)
+      `, [username, password]
+    );
   } catch (e) {
 
   }
