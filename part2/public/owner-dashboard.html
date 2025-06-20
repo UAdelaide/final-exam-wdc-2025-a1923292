@@ -19,8 +19,10 @@
       <div class="card-body">
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
-            <label class="form-label">Dog ID</label>
-            <select>
+            <label class="form-label">Select your dog</label>
+            <select v-model="form">
+
+            </select>
           </div>
           <div class="mb-3">
             <label class="form-label">Requested Date & Time</label>
