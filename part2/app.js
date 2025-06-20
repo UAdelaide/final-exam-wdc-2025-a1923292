@@ -21,9 +21,9 @@ app.use(session({
     saveUninitialised: false,
     cookie: {
         secure: false,
-        maxAge: 1000 * 60
+        maxAge: 1000 * 60 * 60
     }
-}))
+}));
 
 // Export the app instead of listening here
 module.exports = app;
