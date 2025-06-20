@@ -40,13 +40,13 @@
       const password = document.getElementById('password')?.value;
       if (userName && password){
         try {
-          const response = await fetch();
+          const response = await fetch('/');
           const data = await response.json();
           if (response.ok && data.result){
             // redirect
           }
         } catch (e) {
-          console.error("cooked")
+          console.error("cooked");
         }
       }
     })
