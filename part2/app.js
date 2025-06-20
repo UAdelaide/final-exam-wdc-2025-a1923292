@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
+// added express session middleware
 app.use(session({
     secret: "very_secret_secret_2025_WDC_Exam:/",
     resave: false,
