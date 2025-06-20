@@ -100,7 +100,7 @@
 
         onMounted(async () => {
           try {
-            const response = await fetch('/api/users/dogs2');
+            const response = await fetch('/api/users/dogs-images');
             if (!response.ok) throw new Error('failed to load table of dogs');
             dogs.value = await response.json();
           } catch (e) {
