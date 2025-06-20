@@ -89,8 +89,8 @@
     }
 
     document.body.addEventListener('DOMContentLoaded', () => {
-      
-    })
+       document.getElementById('log-out-btn').addEventListener('click',logoutFunction);
+    });
 
     const { createApp, ref, onMounted } = Vue;
 
