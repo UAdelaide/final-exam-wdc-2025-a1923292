@@ -53,7 +53,7 @@
           const data = await response.json();
           if (response.ok && data.message === "SUCCESS"){
             // redirect
-            window.location.href('/');
+            window.location.href(`/${data.role}-dashboard`);
           } else {
             console.error(data.message);
           }
