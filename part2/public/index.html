@@ -35,7 +35,7 @@
     }).mount('#app');
   </script>
   <script>
-    document.getElementById('form-submit-btn').addEventListener('click', async () => {
+    document.getElementById('form-submit-btn').addEventListener('click', async (event) => {
       const userName = document.getElementById('username')?.value;
       const password = document.getElementById('password')?.value;
       if (userName && password){
