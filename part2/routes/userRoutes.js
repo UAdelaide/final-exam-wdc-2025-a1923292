@@ -130,9 +130,8 @@ router.get('/dogs', async (req,res) => {
   }
   try {
     const [result] = await db.query(
-      `SELECT d.name FROM Dogs AS d
-      INNER JOIN Users AS u ON u.user_id=d.owner_id
-      WHERE u.user_id = ?`,
+      `SELECT name FROM Dogs
+      WHERE owner_id = ?`,
       [req.session.user.id]
     );
     res.status(200).json({
